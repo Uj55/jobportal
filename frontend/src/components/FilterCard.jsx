@@ -7,7 +7,7 @@ import { setSearchedQuery } from '@/redux/jobSlice'
 const fitlerData = [
     {
         fitlerType: "Location",
-        array: ["Delhi NCR", "Bangalore", "Hyderabad", "Pune", "Mumbai"]
+        array: ["Damak", "Biratnagar", "Dharan", "Birtamode", "Ithari"]
     },
     {
         fitlerType: "Industry",
@@ -30,13 +30,13 @@ const FilterCard = () => {
     },[selectedValue]);
     return (
         <div className='w-full bg-white p-3 rounded-md'>
-            <h1 className='font-bold text-lg'>Filter Jobs</h1>
+            <h1 className='font-bold text-lg text-sky-500'>Filter Jobs</h1>
             <hr className='mt-3' />
             <RadioGroup value={selectedValue} onValueChange={changeHandler}>
                 {
                     fitlerData.map((data, index) => (
                         <div>
-                            <h1 className='font-bold text-lg'>{data.fitlerType}</h1>
+                            <h1 className='font-bold text-lg text-green-500'>{data.fitlerType}</h1>
                             {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
